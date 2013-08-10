@@ -19,7 +19,7 @@ Or install it yourself as:
 
     $ gem install better_logger
 
-## Ehancements
+## Enhancements
 
 * Default log format is more readable: `2013-08-10T15:19:21Z [app#68530]  INFO: hi`
 * Set `logger.level` with symbols. `logger.level = :info`
