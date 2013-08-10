@@ -21,8 +21,8 @@ Or install it yourself as:
 
 ## Ehancements
 
-* Default log format is more readable: `2013-08-10T15:19:21+02:00 [app#68530]  INFO: hi`
-* Set `logger.level` with symbols.
+* Default log format is more readable: `2013-08-10T15:19:21Z [app#68530]  INFO: hi`
+* Set `logger.level` with symbols. `logger.level = :info`
 * Provide a `NullLogger` object to be used in cases where you need to
   tell some code to shut up.
 
