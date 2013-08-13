@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = BetterLogger::VERSION
   spec.authors       = ["ahawkins"]
   spec.email         = ["me@broadcastingadam.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Simple monkey patch to stdlib's Logger to make it easier to use.}
+  spec.summary       = %q{Simple monkey patch to stdlib's Logger to make it easier to use.}
+  spec.homepage      = "https://github.com/ahawkins/better_logger"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
