@@ -1,4 +1,4 @@
 require "logger-better/version"
 
-require 'logger/better'
-require 'logger/null_logger'
+require_relative 'logger/better'
+require_relative 'logger/null_logger'
