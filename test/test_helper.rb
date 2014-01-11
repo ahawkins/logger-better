@@ -1,4 +1,4 @@
 require 'bundler/setup'
-require 'better_logger'
+require 'logger-better'
 
 require 'minitest/autorun'
