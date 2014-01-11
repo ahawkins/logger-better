@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'logger-better/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "better_logger"
+  spec.name          = "logger-better"
   spec.version       = Logger::Better::VERSION
   spec.authors       = ["ahawkins"]
   spec.email         = ["adam@hawkins.io"]
