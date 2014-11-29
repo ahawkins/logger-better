@@ -1,4 +1,4 @@
-# BetterLogger
+# logger-better
 
 Simple monkey patch to stdlib's `Logger` to make it easier to use.
 
@@ -9,7 +9,7 @@ projects and got tired of it.
 
 Add this line to your application's Gemfile:
 
-    gem 'better_logger'
+    gem 'logger-better'
 
 And then execute:
 
@@ -17,7 +17,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install better_logger
+    $ gem install logger-better
 
 ## Enhancements
 
