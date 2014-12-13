@@ -3,12 +3,12 @@ require 'logger/better'
 require 'stringio'
 
 class BetterTest < MiniTest::Unit::TestCase
-  def test_uses_the_iso_8601_times
+  def test_uses_utc_iso_8601_times
     formatter = Logger::Formatter.new
 
     time = Time.now
     log = formatter.call 'info', time, 'app', 'hi'
-    assert_includes log, time.iso8601
+    assert_includes log, time.utc.iso8601
   end
 
   def test_starts_with_the_time

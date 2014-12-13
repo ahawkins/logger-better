@@ -23,7 +23,7 @@ class Logger
 
   class Formatter
     def call(severity, time, progname, msg)
-      format % [time.iso8601, progname, $$, severity, msg2str(msg)]
+      format % [time.utc.iso8601, progname, $$, severity, msg2str(msg)]
     end
 
     def format
