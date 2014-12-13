@@ -3,54 +3,46 @@ require 'logger/better'
 require 'stringio'
 
 class BetterTest < MiniTest::Unit::TestCase
-  def test_uses_utc_iso_8601_times
-    formatter = Logger::Formatter.new
+  attr_reader :formatter
 
+  def setup
+    @formatter = Logger::Formatter.new
+  end
+
+  def test_uses_utc_iso_8601_times
     time = Time.now
     log = formatter.call 'info', time, 'app', 'hi'
     assert_includes log, time.utc.iso8601
   end
 
   def test_starts_with_the_time
-    formatter = Logger::Formatter.new
-
     time = Time.now
     log = formatter.call 'info', time, 'app', 'hi'
     assert_equal 0, log.index(time.iso8601)
   end
 
   def test_progname_comes_after_time
-    formatter = Logger::Formatter.new
-
     time = Time.now
     log = formatter.call 'info', time, 'app', 'hi'
     assert_before log, 'app', time.iso8601
   end
 
   def test_pid_comes_after_progname
-    formatter = Logger::Formatter.new
-
     log = formatter.call 'info', Time.now, 'app', 'hi'
     assert_before log, $$.to_s, 'app'
   end
 
   def test_level_comes_after_progname
-    formatter = Logger::Formatter.new
-
     log = formatter.call 'info', Time.now, 'app', 'hi'
     assert_before log, 'info',  $$.to_s
   end
 
   def test_message_comes_last
-    formatter = Logger::Formatter.new
-
     log = formatter.call 'info', Time.now, 'app', 'hi'
     assert_before log, 'hi', 'info'
   end
 
   def test_removes_extra_new_lines_from_end_of_message
-    formatter = Logger::Formatter.new
-
     message = "!\n\n"
 
     log = formatter.call 'info', Time.now, 'app', message
