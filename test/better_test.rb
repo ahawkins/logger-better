@@ -48,6 +48,16 @@ class BetterTest < MiniTest::Unit::TestCase
     assert_before log, 'hi', 'info'
   end
 
+  def test_removes_extra_new_lines_from_end_of_message
+    formatter = Logger::Formatter.new
+
+    message = "!\n\n"
+
+    log = formatter.call 'info', Time.now, 'app', message
+    # strip here because all lines will have a new line.
+    assert_equal '!', log.strip[-1]
+  end
+
   def test_can_set_level_with_symbol
     logger = Logger.new StringIO.new
 
