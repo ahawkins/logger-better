@@ -17,6 +17,12 @@ class NullLoggerTest < MiniTest::Unit::TestCase
     assert yielded, 'Block not yielded'
   end
 
+  def test_works_with_most_common_syntax
+    logger = NullLogger.new
+
+    logger.info 'foo'
+  end
+
   def test_does_not_yield_when_message_set
     logger = NullLogger.new
 
