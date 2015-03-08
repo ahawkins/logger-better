@@ -63,7 +63,7 @@ require 'logger/better'
 logger = Logger.new $stdout
 logger.info('testing') { 'Hello World' } # => 2013-08-10T15:19:21Z [app#68530]  INFO: Hello World
 
-require 'logger/no_timestamps'
+require 'logger/no_timestamp'
 
 # Notimestamp factory method behaves the same as new, just sets the
 # default formatter
