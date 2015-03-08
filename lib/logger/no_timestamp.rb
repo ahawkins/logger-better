@@ -1,5 +1,5 @@
 require 'logger-better'
 
 class Logger
-  include BetterPatch
+  include NoTimestampPatch
 end
