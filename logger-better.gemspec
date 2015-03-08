@@ -1,11 +1,7 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'logger-better/version'
-
 Gem::Specification.new do |spec|
   spec.name          = "logger-better"
-  spec.version       = Logger::Better::VERSION
+  spec.version       = "0.2.0"
   spec.authors       = ["ahawkins"]
   spec.email         = ["adam@hawkins.io"]
   spec.description   = %q{Simple monkey patch to stdlib's Logger to make it easier to use.}

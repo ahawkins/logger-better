@@ -1,12 +1,15 @@
 require_relative 'test_helper'
-require 'logger/better'
-require 'stringio'
 
 class BetterTest < MiniTest::Unit::TestCase
   attr_reader :formatter
 
   def setup
-    @formatter = Logger::Formatter.new
+    @formatter = Logger::Better::TimestampFormatter.new
+  end
+
+  def test_uses_the_correct_formatter
+    logger = Logger::Better.new $stdout
+    assert_instance_of Logger::Better::TimestampFormatter, logger.formatter
   end
 
   def test_uses_utc_iso_8601_times
@@ -51,7 +54,7 @@ class BetterTest < MiniTest::Unit::TestCase
   end
 
   def test_can_set_level_with_symbol
-    logger = Logger.new StringIO.new
+    logger = Logger::Better.new StringIO.new
 
     logger.level = :debug
     assert_equal Logger::DEBUG, logger.level
@@ -68,7 +71,7 @@ class BetterTest < MiniTest::Unit::TestCase
   end
 
   def tests_sets_level_unkown_when_passing_an_unkown_symol
-    logger = Logger.new StringIO.new
+    logger = Logger::Better.new StringIO.new
 
     logger.level = :foo
     assert_equal Logger::UNKNOWN, logger.level
