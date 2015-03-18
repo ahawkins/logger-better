@@ -1,7 +1,7 @@
 # coding: utf-8
 Gem::Specification.new do |spec|
   spec.name          = "logger-better"
-  spec.version       = "0.2.0"
+  spec.version       = "0.2.1"
   spec.authors       = ["ahawkins"]
   spec.email         = ["adam@hawkins.io"]
   spec.description   = %q{Simple monkey patch to stdlib's Logger to make it easier to use.}
