@@ -9,7 +9,16 @@ namespace :test do
   task :require do
     require 'bundler/setup'
     require 'logger/better'
+
+    logger = Logger.new $stdout
+    logger.level = :info
+    logger.info 'hello'
+
     require 'logger/no_timestamp'
+
+    logger = Logger.new $stdout
+    logger.level = :info
+    logger.info 'hello'
   end
 
   task ci: [ :lib, :require ]

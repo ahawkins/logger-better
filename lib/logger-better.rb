@@ -81,7 +81,7 @@ class Logger
 
     class << self
       def included(base)
-        base.include Better::LevelPatch
+        base.prepend Better::LevelPatch
       end
     end
   end
@@ -94,7 +94,7 @@ class Logger
 
     class << self
       def included(base)
-        base.include Better::LevelPatch
+        base.prepend Better::LevelPatch
       end
     end
   end
