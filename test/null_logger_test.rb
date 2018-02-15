@@ -2,6 +2,11 @@ require_relative 'test_helper'
 require 'logger/null_logger'
 
 class NullLoggerTest < MiniTest::Test
+  def test_sets_log_level_by_default
+    logger = NullLogger.new
+    assert logger.level
+  end
+
   def test_add_does_nothing
     logger = NullLogger.new
     logger.add Logger::INFO, 'hi', 'tests'
