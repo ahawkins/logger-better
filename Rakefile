@@ -6,7 +6,7 @@ namespace :test do
     t.test_files = Dir['test/**/*_test.rb']
   end
 
-  task :require do
+  task :smoke do
     require 'bundler/setup'
     require 'logger/better'
 
@@ -21,7 +21,7 @@ namespace :test do
     logger.info 'hello'
   end
 
-  task ci: [ :lib, :require ]
+  task ci: [ :lib, :smoke ]
 end
 
 task test: 'test:ci'
