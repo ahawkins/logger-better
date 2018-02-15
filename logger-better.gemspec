@@ -3,7 +3,7 @@ Gem::Specification.new do |spec|
   spec.name          = "logger-better"
   spec.version       = "0.2.2"
   spec.authors       = ["ahawkins"]
-  spec.email         = ["adam@hawkins.io"]
+  spec.email         = ["hi@ahawkins.me"]
   spec.description   = %q{Simple monkey patch to stdlib's Logger to make it easier to use.}
   spec.summary       = %q{Simple monkey patch to stdlib's Logger to make it easier to use.}
   spec.homepage      = "https://github.com/ahawkins/logger-better"
