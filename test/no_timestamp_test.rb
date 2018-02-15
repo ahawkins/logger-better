@@ -1,6 +1,6 @@
 require_relative 'test_helper'
 
-class NoTimestampTest < MiniTest::Unit::TestCase
+class NoTimestampTest < MiniTest::Test
   attr_reader :formatter
 
   def setup

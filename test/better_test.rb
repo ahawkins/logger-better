@@ -1,6 +1,6 @@
 require_relative 'test_helper'
 
-class BetterTest < MiniTest::Unit::TestCase
+class BetterTest < MiniTest::Test
   attr_reader :formatter
 
   def setup

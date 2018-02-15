@@ -1,6 +1,6 @@
 require_relative 'test_helper'
 
-class NoTimestampPatchTest < MiniTest::Unit::TestCase
+class NoTimestampPatchTest < MiniTest::Test
   def test_patching_sets_correct_formatter_on_new_instances
     patched_logger = Class.new(Logger) do
       include Logger::NoTimestampPatch
